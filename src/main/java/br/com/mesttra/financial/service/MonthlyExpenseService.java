@@ -23,7 +23,12 @@ public class MonthlyExpenseService {
 	public MonthlyExpense addExpense(MonthlyExpense monthlyExpense) {
         return  monthlyExpenseRepository.save(monthlyExpense);
     }
+	
+	public MonthlyExpense updateExpense(MonthlyExpense monthlyExpense) {
+        return  monthlyExpenseRepository.save(monthlyExpense);
+    }
 
+	
 	public List<MonthlyExpense> listExpenses() {
         return  monthlyExpenseRepository.findAll();
     }
