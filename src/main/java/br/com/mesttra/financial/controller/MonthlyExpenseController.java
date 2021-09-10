@@ -50,6 +50,7 @@ public class MonthlyExpenseController {
 
     @GetMapping
     public List<MonthlyExpense> listExpenses() {
+    	System.out.println("teste1");
     	return monthlyExpenseService.listExpenses();
     }
     
@@ -58,6 +59,12 @@ public class MonthlyExpenseController {
     	return monthlyExpenseService.getExpense(id);
     }
    
+//    @GetMapping
+//    public Optional<MonthlyExpense> listExpenses(@RequestBody MonthlyExpense monthlyExpense) {
+//    	System.out.println("teste2");
+//    	return monthlyExpenseService.getExpense(monthlyExpense.getId());
+//    }
+//    
     @DeleteMapping(path = "/{id}")
     public String removeExpense(@PathVariable Long id) {
     	return monthlyExpenseService.removeExpense(id);
